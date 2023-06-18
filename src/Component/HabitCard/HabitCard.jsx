@@ -9,10 +9,15 @@ import { useLocation, Link } from "react-router-dom";
 export function HabitCard({ habit, setFormData }) {
   const location = useLocation();
   const { dispatch } = useContext(DataContext);
-  const { setToggleDialogBox } = useContext(DisplayContext);
+  const { setToggleDialogBox, setCurrentHabit } = useContext(DisplayContext);
 
   return (
-    <div>
+    <div
+      onClick={() => {
+        setToggleDialogBox(() => true);
+        setCurrentHabit(() => habit);
+      }}
+    >
       <div
         style={{
           display: location.pathname === "/archive" ? "none" : "flex",
@@ -68,10 +73,6 @@ export function HabitCard({ habit, setFormData }) {
       </div>
 
       <h2>{habit.name}</h2>
-      <p>{habit.repeat}</p>
-      <p>{habit.goal}</p>
-      <p>{habit.time}</p>
-      <p>{habit.date}</p>
     </div>
   );
 }
