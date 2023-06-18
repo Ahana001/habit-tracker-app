@@ -100,7 +100,7 @@ export function HabitForm({ formData, setFormData }) {
               <p>{currentHabit.date}</p>
             </div>
           ) : (
-            <div>
+            <>
               <h2>New Habit</h2>
               <label>Name</label>
               <input
@@ -204,7 +204,7 @@ export function HabitForm({ formData, setFormData }) {
                   SAVE CHANGES
                 </button>
               )}
-            </div>
+            </>
           )}
         </div>
       </div>
