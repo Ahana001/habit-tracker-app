@@ -1,0 +1,44 @@
+.HomePageContainer {
+  max-width: 124rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+.HomePageContainer .Heading {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.NoHabites {
+  margin-top: 5rem;
+  font-size: 1.4rem;
+}
+.HomePageContainer .AddHabitButton {
+  background-color: var(--button-color);
+  padding: 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  align-self: flex-end;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  grid-gap: 1.5rem;
+}
+ul li {
+  list-style: none;
+  padding: 2rem;
+}
+
+.HomePageGoToArchiveLink {
+  color: black;
+  align-self: flex-end;
+  text-decoration: none;
+  margin-top: 2rem;
+}

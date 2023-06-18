@@ -1,0 +1,16 @@
+.ActionButton {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-self: flex-end;
+}
+.ActionButton button {
+  border: 0.1rem solid black;
+  cursor: pointer;
+}
+.GoToArchiveLink {
+  font-size: 1.4rem;
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
