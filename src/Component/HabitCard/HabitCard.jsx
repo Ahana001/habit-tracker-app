@@ -12,12 +12,7 @@ export function HabitCard({ habit, setFormData }) {
   const { setToggleDialogBox, setCurrentHabit } = useContext(DisplayContext);
 
   return (
-    <div
-      onClick={() => {
-        setToggleDialogBox(() => true);
-        setCurrentHabit(() => habit);
-      }}
-    >
+    <div>
       <div
         style={{
           display: location.pathname === "/archive" ? "none" : "flex",
@@ -72,7 +67,14 @@ export function HabitCard({ habit, setFormData }) {
         </div>
       </div>
 
-      <h2>{habit.name}</h2>
+      <h2
+        onClick={() => {
+          setToggleDialogBox(() => true);
+          setCurrentHabit(() => habit);
+        }}
+      >
+        {habit.name}
+      </h2>
     </div>
   );
 }
