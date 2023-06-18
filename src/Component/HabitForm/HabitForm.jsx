@@ -47,7 +47,7 @@ export function HabitForm({ formData, setFormData }) {
         name: "",
         repeat: "Once",
         goal: "1 times",
-        time: "09:00",
+        time: "Any Time",
         date: "Today",
       }));
       setFormDataError(() => "");
@@ -69,7 +69,7 @@ export function HabitForm({ formData, setFormData }) {
         name: "",
         repeat: "Once",
         goal: "1 times",
-        time: "09:00",
+        time: "Any Time",
         date: "Today",
       }));
       setFormDataError(() => "");

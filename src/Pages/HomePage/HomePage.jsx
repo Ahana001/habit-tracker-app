@@ -16,7 +16,7 @@ export function HomePage() {
     name: "",
     repeat: "Once",
     goal: "1 times",
-    time: "09:00",
+    time: "Any Time",
     date: "Today",
   });
   const removeArchiveHabits = state.habits.filter((habit) => !habit.isArchive);
@@ -33,7 +33,7 @@ export function HomePage() {
             name: "",
             repeat: "Once",
             goal: "1 times",
-            time: "09:00",
+            time: "Any Time",
             date: "Today",
           }));
           setToggleDialogBox(() => !toggleDialogBox);
