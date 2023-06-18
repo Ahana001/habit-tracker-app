@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 export function ArchiveHabitPage() {
   const { state } = useContext(DataContext);
-
+  const filterArchieveHabits = state.habits.filter((habit) => habit.isArchive);
   return (
     <div>
       <Link className="GoToBackLink" to="/">
@@ -18,7 +18,7 @@ export function ArchiveHabitPage() {
 
       <h2>Archive Habits</h2>
       <ul>
-        {state.habits.map((habit) => {
+        {filterArchieveHabits.map((habit) => {
           let randomValue = color[Math.floor(Math.random() * color.length)];
           return (
             <li
