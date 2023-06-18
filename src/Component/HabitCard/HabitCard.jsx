@@ -67,14 +67,15 @@ export function HabitCard({ habit, setFormData }) {
         </div>
       </div>
 
-      <h2
+      <div
+        className="HabitName"
         onClick={() => {
           setToggleDialogBox(() => true);
           setCurrentHabit(() => habit);
         }}
       >
-        {habit.name}
-      </h2>
+        <h2>{habit.name}</h2>
+      </div>
     </div>
   );
 }
